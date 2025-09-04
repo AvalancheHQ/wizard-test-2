@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 
 [dev-dependencies]
-divan = "0.1"
+divan = { package = "codspeed-divan-compat", version = "*" }
 
 [[bench]]
 name = "benchmarks"
