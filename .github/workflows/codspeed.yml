@@ -1,0 +1,29 @@
+name: CodSpeed
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  benchmarks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+      
+      - name: Setup Rust cache
+        uses: Swatinem/rust-cache@v2
+        
+      - name: Build project
+        working-directory: ./example-rust-divan
+        run: cargo build --release
+        
+      - name: Run benchmarks
+        uses: CodSpeedHQ/action@v3
+        with:
+          run: cargo bench --manifest-path=./example-rust-divan/Cargo.toml
+          token: ${{ secrets.CODSPEED_TOKEN }}
