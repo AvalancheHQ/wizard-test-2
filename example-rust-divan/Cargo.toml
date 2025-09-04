@@ -1,0 +1,15 @@
+[package]
+name = "example-rust-divan"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+
+[dev-dependencies]
+divan = "0.1"
+
+[[bench]]
+name = "benchmarks"
+harness = false
