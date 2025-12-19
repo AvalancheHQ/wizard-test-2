@@ -1,6 +1,6 @@
 use std::hint::black_box;
 
-use criterion::{BenchmarkId, Criterion, Throughput, criterion_group, criterion_main};
+use codspeed_criterion_compat::{BenchmarkId, Criterion, Throughput, criterion_group, criterion_main};
 use kcl_ezpz::{
     Constraint, IdGenerator,
     datatypes::{DatumPoint, LineSegment},
