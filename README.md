@@ -1,5 +1,7 @@
 # EZPZ
 
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/AvalancheHQ/wizard-test-2?utm_source=badge)
+
 Constraint solver for use in Zoo Design Studio, or wherever you want to use it.
 
 ## Overview
