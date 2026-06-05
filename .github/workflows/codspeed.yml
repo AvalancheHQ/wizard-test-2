@@ -17,7 +17,9 @@ jobs:
     - name: Setup rust toolchain, cache and cargo-codspeed binary
       uses: moonrepo/setup-rust@v0
       with:
-        channel: stable
+        # Pinned because a transitive dependency (spindle, via faer) fails to
+        # compile on newer stable toolchains.
+        channel: '1.92.0'
         cache-target: release
         bins: cargo-codspeed
     - name: Install just
